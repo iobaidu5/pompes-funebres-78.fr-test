@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Lato:400,700&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" /> -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./assets/js/popper.min.js"></script>
+  <script defer src="./assets/js/bootstrap.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous"></script> -->
+
+  <script> document.addEventListener("DOMContentLoaded", () => { document.querySelectorAll("img[src]").forEach(image => { const altText = generateAltText(image.getAttribute("src")); image.alt = altText; }); }); function generateAltText(src) { return src.split('/').pop().split('.')[0].replace(/[-\/_*]/g, ' '); } </script>
+
+
+  <title></title>
+<meta property="og:title" content="" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="description" content="" />
+<meta property="og:description" content="" />
+<meta name="keywords" content="" />
+<link rel="canonical" href="http://localhost:4000/obseques" />
+<meta property="og:url" content="http://localhost:4000/obseques" />
+<meta property="og:site_name" content="" />
+<meta name="google-site-verification" content="hN4_ituHF27zT8JOJ5muRD3HbDG0U2tbN8-zrOmdhaI" />
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebSite",
+"url":"http://localhost:4000/obseques",
+"description":"",
+"name":""
+}
+</script>
+
+
+</head>
+
+
+<body>
+  <header class="topbar">
+  <div class="container">
+    <ul id="menu-topbar-menu" class="topbar-menu">
+      <li id="menu-item-626"
+        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-626"><a
+          href="">Configurateur de monument</a>
+        <!-- <ul class="sub-menu">
+          <li id="menu-item-627" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-627"><a
+              href="https://demo.imithemes.com/obsequy/cart/">Cart</a></li>
+          <li id="menu-item-628" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-628"><a
+              href="https://demo.imithemes.com/obsequy/checkout/">Checkout</a></li>
+        </ul> -->
+      </li>
+      <li id="menu-item-624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-624"><a
+          href="/devis"> Devis gratuit</a></li>
+      <li id="menu-item-625" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-625"><a
+          href="tel:0130902784">01 30 90 27 84</a></li>
+    </ul>
+    <div class="header-info-col">
+      <i class="fa fa-clock"></i> <strong>Urgence
+        décès, 24h/24 - 7j/7</strong>
+    </div>
+    <div class="header-info-col">
+      <i class="fa fa-phone"></i> <strong>1800-9090-8089</strong>
+    </div>
+    <div class="header-info-col">
+      <!-- <i class="fa fa-envelope-o"></i> <strong>help@obsequy.com</strong>
+    </div>
+    <div class="header-info-col">
+      <i class="fa fa-map-marker"></i> <strong>123, landmark address</strong>
+    </div> -->
+    </div>
+</header>
+
+
+<div class="site-header-wrapper">
+  <header class="site-header">
+    <div class="container">
+      <div class="header-flex align-items-center justify-content-between">
+        <!-- Logo -->
+        <div class="site-logo">
+          <a href="./index.html" class="default-logo">
+            <img src="./assets/img/logo.png" alt="Obsequy">
+          </a>
+        </div>
+
+        <!-- Hamburger button -->
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          id="menu-toggle"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Menu -->
+        <ul id="menu-primary-menu" class="sf-menu dd-menu align-items-center mb-0">
+          <li class="menu-item"><a href="./index.html"><span>Accueil</span></a></li>
+          <li class="menu-item"><a href="./obseques.html"><span>Obsèques</span></a></li>
+          <li class="menu-item"><a href="/prevoyance"><span>Prévoyance</span></a></li>
+          <li class="menu-item"><a href="/monuments"><span>Monuments</span></a></li>
+          <li class="menu-item"><a href="/contact"><span>Contact</span></a></li>
+          <li class="menu-item"><a href="/avis-de-deces"><span>Avis de décès</span></a></li>
+          <li class="menu-item"><a href="/espace-famille"><span>Espace Famille</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+</div>
+
+<!-- <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu-primary-menu");
+
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      menu.classList.toggle("active");
+    });
+  });
+</script> -->
+
+
+  
+
+
+  <div class="">
+    <div class="hero-banner">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Obsèques</h1>
+  </div>
+</div>
+
+
+<section class="about-section">
+  <div class="container">
+
+    <!-- Three Info Blocks -->
+    <div class="row text-center mb-5">
+      <div class="col-md-4 mb-4">
+        <h3 class="section-title">Notre histoire</h3>
+        <p>
+          Depuis plus de 20 ans, notre agence de pompes funèbres dans les Yvelines (78)
+          accompagne les familles dans les moments les plus difficiles de la vie.
+          Notre expérience, fondée sur la proximité, la confiance et le respect, nous permet
+          d’offrir un accompagnement personnalisé à chaque famille.
+          Au fil des années, nous avons bâti une véritable relation de confiance locale, en
+          plaçant toujours l’humain au cœur de nos engagements.
+        </p>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h3 class="section-title">Notre mission</h3>
+        <p>
+          Notre mission est d’assurer à chaque famille un accompagnement complet et
+          bienveillant tout au long du processus funéraire.
+          De la prise en charge du défunt à l’organisation de la cérémonie, nous veillons à ce
+          que chaque étape soit menée avec dignité, discrétion et professionnalisme.
+          Nous mettons tout en œuvre pour vous soulager des démarches administratives et
+          vous permettre de vivre votre deuil en toute sérénité.
+        </p>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h3 class="section-title">Notre engagement</h3>
+        <p>
+          Nous nous engageons à proposer des services funéraires sur mesure, dans
+          le respect des convictions, des volontés et du budget de chacun.
+          Nos équipes, disponibles 24h/24 et 7j/7, interviennent rapidement dans tout le
+          département des Yvelines pour vous accompagner à chaque instant.
+          Parce que chaque hommage est unique, nous faisons de la qualité, de l’écoute et du
+          respect nos priorités absolues.
+        </p>
+      </div>
+    </div>
+
+    <!-- Centered Image -->
+    <div class="text-center mb-5">
+      <img src="https://www.pompes-funebres-91.com/assets/img/new/bg1.jpg" alt="Organisation des obsèques"
+        class="about-image img-fluid">
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-block">
+      <h3 class="section-subtitle">L’organisation des obsèques</h3>
+      <p>
+        Perdre un proche est un moment profondément douloureux, chargé d’émotions, de
+        souvenirs et de nombreuses décisions à prendre dans un laps de temps souvent court.
+        Nos pompes funèbres dans les Yvelines (78) vous accompagnent avec écoute, respect et
+        professionnalisme pour organiser des obsèques dans la sérénité.
+        Forts de plus de 20 ans d’expérience, nous guidons les familles pas à pas dans chaque
+        étape, de la constatation du décès jusqu’aux démarches administratives qui suivent la
+        cérémonie.
+      </p>
+
+      <!-- Section 1 -->
+      <h4>1. Avant les obsèques : les premières démarches</h4>
+      <p>
+        L’organisation des obsèques débute dès l’annonce du décès.
+        Cette période, souvent marquée par le choc et la tristesse, nécessite pourtant la réalisation
+        rapide de formalités administratives obligatoires. Notre équipe vous accompagne
+        immédiatement pour vous aider à rassembler les documents nécessaires et à effectuer les
+        démarches dans les temps.
+      </p>
+
+      <h5>Le certificat de décès</h5>
+      <p>
+        Le certificat de décès est le premier document indispensable.
+        Il est établi par un médecin, qu’il s’agisse d’un médecin de famille, d’un praticien hospitalier
+        ou d’un médecin de garde. Ce certificat confirme officiellement le décès et permet de lancer
+        l’ensemble des démarches administratives et funéraires.
+        Dès qu’il est signé, il devient possible de procéder au transfert du corps vers une chambre
+        funéraire ou un autre lieu défini par la famille.
+      </p>
+
+      <h5>L’acte de décès</h5>
+      <p>
+        Pour obtenir l’acte de décès, il faut se présenter à la mairie du lieu de décès muni :
+      </p>
+      <ul>
+        <li>du livret de famille du défunt,</li>
+        <li>d’une pièce d’identité,</li>
+        <li>et du certificat de décès signé par le médecin.</li>
+      </ul>
+      <p>
+        Ce document officiel est nécessaire pour toutes les démarches suivantes : banque, sécurité
+        sociale, employeur, mutuelle, caisse de retraite, assurance, etc.
+        Nos conseillers peuvent se charger, à votre demande, de préparer et transmettre les
+        documents nécessaires à ces organismes pour vous soulager de cette charge.
+      </p>
+
+      <h5>Les autorisations et le transport du corps</h5>
+      <p>
+        Avant la cérémonie, certaines démarches peuvent nécessiter une autorisation préfectorale
+        ou municipale, notamment pour le transport du défunt, la mise en bière ou la crémation.
+        Nos équipes s’occupent de l’ensemble de ces formalités et restent disponibles 24h/24 et 7j/7
+        pour répondre à toutes vos questions et organiser le transfert dans le respect total de la
+        réglementation et de la volonté du défunt.
+        Notre rôle est de vous accompagner à chaque étape, pour que vous puissiez traverser ce
+        moment en toute confiance.
+      </p>
+
+      <!-- Section 2 -->
+      <h4>2. Les obsèques : organiser la cérémonie</h4>
+      <p>
+        Les obsèques représentent bien plus qu’un simple moment administratif : c’est un temps
+        d’hommage et de recueillement, essentiel au processus de deuil.
+        Chaque famille, chaque culture, chaque conviction mérite une cérémonie qui lui ressemble.
+      </p>
+
+      <h5>Une cérémonie à l’image du défunt</h5>
+      <p>
+        Nos pompes funèbres dans les Yvelines organisent des cérémonies personnalisées,
+        qu’elles soient civiles (laïques) ou religieuses, selon les volontés exprimées ou, à défaut,
+        celles de la famille.
+        Nous vous accompagnons dans le choix du lieu, du cercueil ou de l’urne, des fleurs, de la
+        musique, et dans la coordination avec les lieux de culte ou les services municipaux.
+      </p>
+
+      <h5>Les cérémonies religieuses</h5>
+      <p>
+        Nous assurons l’organisation de funérailles religieuses dans le respect des traditions et des
+        rites. Nos équipes sont formées pour accompagner chaque famille, quelle que soit sa
+        confession :
+      </p>
+      <ul class="faith-list">
+        <li>Catholique</li>
+        <li>Protestante</li>
+        <li>Orthodoxe</li>
+        <li>Juive</li>
+        <li>Musulmane</li>
+        <li>Bouddhiste</li>
+        <li>Hindouiste</li>
+      </ul>
+
+      <p>
+        Nous travaillons en lien avec les lieux de culte et les représentants religieux pour garantir
+        une cérémonie digne, fidèle aux croyances et aux souhaits du défunt.
+      </p>
+
+      <h5>Les cérémonies civiles</h5>
+      <p>
+        Pour les familles souhaitant un hommage laïque, nous proposons des cérémonies
+        personnalisées dans un lieu de votre choix : salle de recueillement, cimetière, ou site
+        naturel.
+        Des textes, musiques et témoignages peuvent être intégrés à la cérémonie, pour honorer la
+        mémoire du défunt dans un cadre sobre et apaisant.
+      </p>
+
+      <h5>Notre rôle pendant les obsèques</h5>
+      <p>
+        Pendant toute la préparation et le déroulement des obsèques, notre équipe veille à ce que
+        chaque détail soit pris en charge :
+      </p>
+      <ul>
+        <li>Accueil et orientation des proches,</li>
+        <li>Mise en place du convoi funéraire,</li>
+        <li>Coordination avec les services religieux ou municipaux,</li>
+        <li>Soutien logistique et administratif,</li>
+        <li>Présence discrète mais constante tout au long de la cérémonie.</li>
+      </ul>
+      <p>
+        Notre objectif : vous permettre de vivre ce moment de recueillement dans la
+        sérénité, entouré de vos proches, sans contrainte matérielle.
+      </p>
+
+      <!-- Section 3 -->
+      <h4>3. Après les obsèques : les démarches à effectuer</h4>
+      <p>
+        Une fois la cérémonie terminée, le temps du recueillement peut vraiment commencer.
+        Cependant, plusieurs formalités administratives post-obsèques doivent encore être
+        effectuées.
+        Nos conseillers funéraires restent à votre disposition pour vous guider dans ces démarches
+        et vous fournir toutes les informations nécessaires.
+      </p>
+
+      <h5>Dans la semaine qui suit</h5>
+      <p>Il est important d’avertir rapidement les principaux organismes concernés par le décès :</p>
+      <ul>
+        <li>la mutuelle du défunt,</li>
+        <li>la caisse de retraite,</li>
+        <li>les organismes bancaires et de crédit.</li>
+      </ul>
+
+      <h5>Dans le mois suivant</h5>
+      <p>Vous devrez informer les autres organismes sociaux et institutionnels :</p>
+      <ul>
+        <li>la Caisse Primaire d’Assurance Maladie (CPAM),</li>
+        <li>la Caisse d’Allocations Familiales (CAF),</li>
+        <li>le notaire,</li>
+        <li>les compagnies d’assurance,</li>
+        <li>les employeurs ou organismes payeurs,</li>
+        <li>les prestataires de services et associations auxquels le défunt était lié.</li>
+      </ul>
+
+      <p>
+        Nos équipes peuvent vous remettre une checklist complète et vous accompagner dans la
+        rédaction des courriers et notifications nécessaires.
+      </p>
+
+      <h5>Dans les six mois</h5>
+      <p>
+        Certaines démarches doivent être réalisées dans un délai plus long, notamment :
+      </p>
+      <ul>
+        <li>la déclaration de succession auprès de l’administration fiscale,</li>
+        <li>la régularisation des impôts du défunt,</li>
+        <li>la modification du certificat d’immatriculation du véhicule si celui-ci était à son nom.</li>
+      </ul>
+      <p>
+        Ces étapes marquent souvent la fin du processus administratif.
+        Nous restons disponibles pour vous conseiller sur ces points et vous orienter vers les bons
+        interlocuteurs (notaires, avocats, services publics).
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="accompagnement-section">
+  <div class="container">
+    <div class="accompagnement-content">
+      <h2>Un accompagnement humain et durable</h2>
+      <p>
+        Chez <strong>Pompes Funèbres 78</strong>, nous savons que chaque famille vit le deuil à son rythme.
+        C’est pourquoi notre accompagnement ne s’arrête pas à la cérémonie.
+        Nous restons présents et disponibles pour vous épauler dans la suite de vos démarches
+        et répondre à toutes vos questions.
+      </p>
+      <p class="mission-text">
+        <strong>Notre mission :</strong> vous offrir un accompagnement complet, humain et digne,
+        à chaque étape du parcours funéraire.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-contact">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="container">
+      <h2 class="text-center">Plus d’informations ?</h2>
+      <p class="text-center">
+        Si vous avez besoin de plus de renseignements, vous pouvez remplir notre formulaire entièrement gratuit.
+      </p>
+
+      <form class="form contact_content-form" id="contactForm" method="post"
+        action="https://jgviaboye9.execute-api.eu-west-3.amazonaws.com/prod/notify">
+        <input type="hidden" name="lang" value="fr" />
+        <input type="hidden" name="redirectUrl" value="/message-envoye" />
+        <input type="hidden" name="type" value="contact" />
+        <input type="hidden" name="website" value="" />
+        <input type="hidden" name="lang" value="fr" />
+        <input type="hidden" name="firstName" value="" />
+        <input type="hidden" name="key" value="6Lc7tesrAAAAAOTLrTwFe61kB2BoBH2tQuTSd4PN" />
+
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <div class="form-group has-feedback">
+              <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prénom :" />
+            </div>
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+            <div class="form-group has-feedback">
+              <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Nom :" />
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="form-group has-feedback">
+              <input type="email" class="form-control" id="email" name="email" placeholder="E-mail :" />
+            </div>
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+            <div class="form-group has-feedback">
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Téléphone :" />
+            </div>
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+            <div class="form-group has-feedback">
+              <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Code postal :" />
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="form-group has-feedback">
+              <select name="select1" id="form_select1" class="form-control select">
+                <option>Etre recontacté...</option>
+                <option>De 8h à 12h</option>
+                <option>De 12h à 14h</option>
+                <option>De 14h à 18h</option>
+                <option>De 18h à 21h</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mx-5">
+          <div class="col-xs-12 text-center">
+            <div class="row justify-content-center">
+              <div class="checkbox d-flex mb-2 justify-content-center">
+                <input name="condition" type="checkbox"
+                  style="height:1rem; text-align: left; width:1rem; vertical-align: middle; margin-top: .2rem; margin-right: .5rem;" />
+                <span class="contact_content-form--label"
+                  style="font-size: 16px !important; font-weight: 400 !important; color: #fff;">
+                  En utilisant ce formulaire, vous acceptez le stockage et la gestion
+                  de vos données par ce site * <a href="#" data-toggle="modal" class="link" data-target="#modal-rgpd"><i
+                      class="fa fa-info-circle"></i></a></span>
+                <i class="fa fa-info-square" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div id="contact-form-response"></div>
+            <div class="form-group d-flex justify-content-start">
+              <div class="g-recaptcha" data-sitekey="6Lc7tesrAAAAAC-eINTpZCpYnXK7iWkdhZw2HfO9">
+              </div>
+              <br />
+              <input style="display: none" type="submit" value="Submit" class="wpcf7-wpcf7-submit" />
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-2">
+          <button type="submit" class="btn form-submit">Envoyer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+  </div>
+
+
+
+  <div class="fixphone">
+    <a href="#">
+      <i class="fa fa-angle-up"></i>
+    </a>
+  </div>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="footer-column">
+          <h3>À propos de Pompes Funèbres 78</h3>
+          <p>
+            Depuis plus de 20 ans, notre agence accompagne les familles endeuillées
+            avec respect, bienveillance et professionnalisme. <br><br>
+            Nous mettons notre expérience et notre savoir-faire au service de
+            l’organisation d’obsèques, de la création de monuments funéraires et de
+            la prévoyance obsèques. <br><br>
+            Notre mission : vous offrir un accompagnement humain et complet, dans la
+            dignité et la sérénité.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-3">
+        <div class="footer-column">
+          <h3>Nos services</h3>
+          <ul class="footer-links">
+            <li><a href="#">Obsèques</a></li>
+            <li><a href="#">Prévoyance</a></li>
+            <li><a href="#">Monuments</a></li>
+            <li><a href="#">Zone d’intervention</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="footer-column">
+          <p>
+            <i class="fas fa-map-marker-alt footer-column-i"></i>  1 place du Vexin
+            78250 Meulan en Yvelines <br>
+          </p>
+          <a href="tel:0130902784">
+            <i class="fas fa-phone-alt footer-column-i"></i>  01 30 90 27 84
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <a href="https://www.bhinternet.fr/" target="_blank">BHInternet - Création site internet | 2025</a>
+</div>
+
+
+
+
+<script src="./assets/js/index.js"></script>
+<script src="./assets/js/formSubmit.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</body>
+
+</html>
