@@ -19,6 +19,12 @@
 <loc>http://localhost:4000/mentions-legales</loc>
 </url>
 <url>
+<loc>http://localhost:4000/monuments</loc>
+</url>
+<url>
 <loc>http://localhost:4000/obseques</loc>
+</url>
+<url>
+<loc>http://localhost:4000/prevoyance</loc>
 </url>
 </urlset>

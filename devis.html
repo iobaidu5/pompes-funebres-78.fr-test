@@ -25,9 +25,14 @@
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous"></script> -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <script> document.addEventListener("DOMContentLoaded", () => { document.querySelectorAll("img[src]").forEach(image => { const altText = generateAltText(image.getAttribute("src")); image.alt = altText; }); }); function generateAltText(src) { return src.split('/').pop().split('.')[0].replace(/[-\/_*]/g, ' '); } </script>
 
+<!-- Include AOS Library -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
   <title></title>
 <meta property="og:title" content="" />
@@ -59,7 +64,7 @@
     <ul id="menu-topbar-menu" class="topbar-menu">
       <li id="menu-item-626"
         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-626"><a
-          href="">Configurateur de monument</a>
+          href="./monuments.html">Configurateur de monument</a>
         <!-- <ul class="sub-menu">
           <li id="menu-item-627" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-627"><a
               href="https://demo.imithemes.com/obsequy/cart/">Cart</a></li>
@@ -68,16 +73,17 @@
         </ul> -->
       </li>
       <li id="menu-item-624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-624"><a
-          href="/devis"> Devis gratuit</a></li>
-      <li id="menu-item-625" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-625"><a
-          href="tel:0130902784">01 30 90 27 84</a></li>
+          href="./devis.html"> Devis gratuit </a></li>
+      <li id="menu-item-625 font-bold"
+        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-625 font-bold"><a
+          href="tel:0161151915"> <strong>01 61 15 19 15</strong> </a></li>
     </ul>
     <div class="header-info-col">
-      <i class="fa fa-clock"></i> <strong>Urgence
-        décès, 24h/24 - 7j/7</strong>
+      <i class="fa fa-clock"></i> <strong> Urgence
+        décès, 24h/24 - 7j/7 </strong>
     </div>
     <div class="header-info-col">
-      <i class="fa fa-phone"></i> <strong>1800-9090-8089</strong>
+      <i class="fas fa-phone-alt"></i> <strong> 01 61 15 19 15 </strong>
     </div>
     <div class="header-info-col">
       <!-- <i class="fa fa-envelope-o"></i> <strong>help@obsequy.com</strong>
@@ -89,67 +95,392 @@
 </header>
 
 
-<div class="site-header-wrapper">
+<style>
+  .site-header-wrapper {
+      width: 100%;
+  }
+
+  .site-header {
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+      position: relative;
+      z-index: 999;
+      transition: all 0.3s ease 0.1s;
+  }
+
+  .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .site-logo {
+      padding: 22px 0;
+      width: 20rem;
+      max-width: 200px;
+      flex-shrink: 0;
+  }
+
+  .site-logo img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  #menu-toggle {
+      background: none;
+      border: none;
+      color: #333;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  /* Menu styling */
+  #menu-primary-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+
+  #menu-primary-menu li a {
+      color: #333;
+      text-decoration: none;
+      padding: 0;
+      position: relative;
+      display: block;
+      font-size: 14px;
+      transition: color 0.3s;
+  }
+
+  #menu-primary-menu li a span {
+      position: relative;
+  }
+
+  #menu-primary-menu li a:hover {
+      color: #777;
+  }
+
+  /* Desktop only */
+  @media (min-width: 992px) {
+      #menu-primary-menu {
+          display: flex !important;
+          flex-direction: row;
+          justify-content: flex-end;
+      }
+      
+      #menu-toggle {
+          display: none;
+      }
+  }
+
+  /* Mobile menu */
+  @media (max-width: 991px) {
+      /* .site-logo {
+          width: 160px;
+          padding: 15px 0;
+      }
+       */
+      #menu-toggle {
+          display: flex;
+      }
+
+      .header-flex ul.dd-menu > li > a {
+        line-height: 10px !important;
+      }
+      
+      #menu-primary-menu {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background: #fff;
+          border-top: 1px solid #eee;
+          padding: 15px 0;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      #menu-primary-menu.active {
+          display: flex;
+      }
+
+      #menu-primary-menu li {
+          text-align: center;
+          padding: 10px 0;
+      }
+
+      .site-header{
+        padding: 15px 0 !important;
+      }
+      
+      /* #menu-primary-menu li a {
+          padding: 12px 15px;
+      } */
+  }
+  
+  /* Extra small screens */
+  @media (max-width: 575px) {
+      .site-logo {
+          width: 140px;
+          max-width: 140px;
+      }
+  }
+</style>
+
+<div class="site-header-wrapper fixedNav">
   <header class="site-header">
-    <div class="container">
-      <div class="header-flex align-items-center justify-content-between">
-        <!-- Logo -->
-        <div class="site-logo">
-          <a href="./index.html" class="default-logo">
-            <img src="./assets/img/logo.png" alt="Obsequy">
-          </a>
-        </div>
+      <div class="container">
+          <div class="header-flex align-items-center justify-content-between w-100">
+              
+              <!-- Logo -->
+              <div class="site-logo">
+                  <a href="./index.html" class="default-logo">
+                      <img src="./assets/img/logo.png" alt="Obsequy">
+                  </a>
+              </div>
 
-        <!-- Hamburger button -->
-        <button
-          class="navbar-toggler d-lg-none"
-          type="button"
-          id="menu-toggle"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa fa-bars"></i>
-        </button>
+              <!-- Hamburger Button -->
+              <button class="navbar-toggler d-lg-none" type="button" id="menu-toggle" aria-label="Toggle navigation">
+                  <i class="fas fa-bars"></i>
+              </button>
 
-        <!-- Menu -->
-        <ul id="menu-primary-menu" class="sf-menu dd-menu align-items-center mb-0">
-          <li class="menu-item"><a href="./index.html"><span>Accueil</span></a></li>
-          <li class="menu-item"><a href="./obseques.html"><span>Obsèques</span></a></li>
-          <li class="menu-item"><a href="/prevoyance"><span>Prévoyance</span></a></li>
-          <li class="menu-item"><a href="/monuments"><span>Monuments</span></a></li>
-          <li class="menu-item"><a href="/contact"><span>Contact</span></a></li>
-          <li class="menu-item"><a href="/avis-de-deces"><span>Avis de décès</span></a></li>
-          <li class="menu-item"><a href="/espace-famille"><span>Espace Famille</span></a></li>
-        </ul>
+              <!-- Menu -->
+              <ul id="menu-primary-menu" class="sf-menu dd-menu align-items-center mb-0">
+                  <li class="menu-item"><a href="./index.html"><span>Accueil</span></a></li>
+                  <li class="menu-item"><a href="./obseques.html"><span>Obsèques</span></a></li>
+                  <li class="menu-item"><a href="./prevoyance.html"><span>Prévoyance</span></a></li>
+                  <li class="menu-item"><a href="./monuments.html"><span>Monuments</span></a></li>
+                  <li class="menu-item"><a href="./contact.html"><span>Contact</span></a></li>
+                  <li class="menu-item"><a href="/avis-de-deces"><span>Avis de décès</span></a></li>
+                  <li class="menu-item"><a href="/espace-famille"><span>Espace Famille</span></a></li>
+                  <li class="menu-item"><a href="/fleurs-de-deuil"><span>Fleurs de deuil</span></a></li>
+              </ul>
+
+          </div>
       </div>
-    </div>
   </header>
 </div>
 
-<!-- <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu-primary-menu");
-
-    toggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      menu.classList.toggle("active");
-    });
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu-primary-menu');
+      
+      menuToggle.addEventListener('click', function() {
+          menu.classList.toggle('active');
+          
+          // Optional: Change icon when menu is open
+          const icon = this.querySelector('i');
+          if (menu.classList.contains('active')) {
+              icon.classList.remove('fa-bars');
+              icon.classList.add('fa-times');
+          } else {
+              icon.classList.remove('fa-times');
+              icon.classList.add('fa-bars');
+          }
+      });
+      
+      // Close menu when clicking on a menu item (on mobile)
+      if (window.innerWidth < 992) {
+          const menuItems = menu.querySelectorAll('a');
+          menuItems.forEach(item => {
+              item.addEventListener('click', function() {
+                  menu.classList.remove('active');
+                  const icon = menuToggle.querySelector('i');
+                  icon.classList.remove('fa-times');
+                  icon.classList.add('fa-bars');
+              });
+          });
+      }
   });
-</script> -->
-
+</script>
 
   
 
 
   <div class="">
-    
+      <section class="banner section-y">
+    <div class="container">
+      <div class="banner_content hero-content">
+        <h1 class="banner_content-title text-center">Devis</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact pt-0">
+    <div class="container to-100-per-768">
+      <form class="form contact_content-form" id="devisForm" method="post"
+        action="https://jgviaboye9.execute-api.eu-west-3.amazonaws.com/prod/notify">
+        <input type="hidden" name="lang" value="fr" />
+        <input type="hidden" name="type" value="devis" />
+        <input type="hidden" name="firstName" value="" />
+        <input type="hidden" name="redirectUrl" value="/message-envoye" />
+        <input type="hidden" name="key" value="6LeSePoqAAAAAFat4gjyDQDNdIo_12hIgyfQL7Lv" />
+        <input type="hidden" name="website" value="346" />
+        <div class="row">
+          <div class="col-md-6">
+            <div class="menu_content mb-0">
+              <legend class="section-subtitle">Coordonnées</legend>
+            </div>
+            <div class="contact_content">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="firstname">Prénom </label>
+                    <input type="text" class="contact_content-form--input" id="prenom" name="prenom"
+                      placeholder="Prenom" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="firstname">Nom </label>
+                    <input type="text" class="contact_content-form--input" id="name" name="name" placeholder="Nom" />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="firstname">Adresse </label>
+                    <input type="text" class="contact_content-form--input" id="address" name="address"
+                      placeholder="Adresse*" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="firstname">Code postal * </label>
+                    <input type="text" class="contact_content-form--input" id="postal" name="postal"
+                      placeholder="Code postal*" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="firstname">Ville * </label>
+                    <input type="text" class="contact_content-form--input" id="ville" name="ville"
+                      placeholder="Ville*" />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="firstname">E-mail * </label>
+                    <input type="email" class="contact_content-form--input" id="email" name="email"
+                      placeholder="Email" />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="firstname">Téléphone *</label>
+                    <input type="text" class="contact_content-form--input" id="phone" name="phone"
+                      placeholder="Téléphone" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu_content mb-0">
+              <legend class="section-subtitle">Demande</legend>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group has-feedback">
+                  <label for="firstname">Type de prestations</label>
+                  <div class="row flex-column align-items-start">
+                    <div class="col-sm-4">
+                      <div class="checkbox" style="margin-top: 0;">
+                        <label
+                          class="slider_form-label text-left d-flex g-1 justify-content-start text">
+                          <input type="checkbox" name="obseques"> <span
+                            class="to-upper-990">Obsèques</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="checkbox" style="margin-top: 0;">
+                        <label
+                          class="slider_form-label text-left d-flex g-1 justify-content-start text">
+                          <input type="checkbox" name="prevoyance"> <span
+                            class="to-upper-990">Prévoyance</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="checkbox" style="margin-top: 0;">
+                        <label
+                          class="slider_form-label text-left d-flex g-1 justify-content-start text">
+                          <input type="checkbox" name="monument"> <span
+                            class="to-upper-990">Monument</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="firstname">Message </label>
+                  <textarea class="contact_content-form--textarea" id="message" name="message" rows="5"
+                    placeholder="Message"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="checkbox d-flex mb-5">
+          <input name="condition" type="checkbox"
+            style="height:20px; width:20px; vertical-align: middle; margin-right: 1rem;" />
+          <span class="contact_content-form--label" style="font-size: 14px; color: #000;">
+            En utilisant ce formulaire, vous acceptez le stockage et la gestion
+            de vos données par ce site * <a href="#" data-toggle="modal" class="link" data-target="#modal-rgpd"><i
+                class="fa fa-info-circle"></i></a></span>
+          <i class="fa fa-info-square" aria-hidden="true"></i>
+        </div>
+        <div class="form-group d-flex justify-content-center">
+          <div class="g-recaptcha" data-sitekey="6LekTnsrAAAAAIbUzg6y4609lzfBqClupIFoVFNj"></div>
+          <br />
+          <div id="devis-form-response"></div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn form-submit" value="Submit">Envoyer</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <div class="modal fade" id="modal-rgpd" tabindex="-1" role="dialog" aria-labelledby="modal-rgpd-label"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body"> * En cochant cette case, j’accepte que mes données personnelles soient collectées et
+          traitées par le service commercial de Agence Funéraire LEBARON 93. Leur traitement a pour finalité de traiter
+          votre demande spécifique.<br> Les données collectées sont conservées pour la durée de nos relations
+          commerciales
+          + 1 an. Conformément à la loi « informatique et libertés », vous pouvez exercer votre droit d’accès aux
+          données
+          vous concernant et les faire rectifier auprès de notre référent à <a class="link"
+            href="mailto:gagence.sgdb@lebaronfuneraire.fr">agagence.sgdb@lebaronfuneraire.fr</a>.<br> Vous disposez
+          également d’un droit
+          de rectification, à l’oubli, à la portabilité, de limitation ou d’opposition auprès de notre référent à <a
+            href="mailto:agagence.sgdb@lebaronfuneraire.fr" class="link">agence.sgdb@lebaronfuneraire.fr</a>.<br><br> En
+          dernier recours,
+          vous pouvez déposer une réclamation auprès de la CNIL. </div>
+        <div class="modal-footer">
+          <div class="form-group text-center"> <button type="button" class="btn btn-default btn-primary btn-modal"
+              data-dismiss="modal">Fermer</button> </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 
 
-
   <div class="fixphone">
-    <a href="#">
-      <i class="fa fa-angle-up"></i>
+    <a href="tel:01 61 15 19 15" title="01 61 15 19 15" class="one phoneone">
+     <span class="text-white"><i class="fas fa-phone-alt"></i> &nbsp;01 61 15 19 15</span> 
     </a>
   </div>
 
@@ -175,10 +506,11 @@
         <div class="footer-column">
           <h3>Nos services</h3>
           <ul class="footer-links">
-            <li><a href="#">Obsèques</a></li>
-            <li><a href="#">Prévoyance</a></li>
-            <li><a href="#">Monuments</a></li>
+            <li><a href="./obseques.html">Obsèques</a></li>
+            <li><a href="./prevoyance.html">Prévoyance</a></li>
+            <li><a href="./monuments.html">Monuments</a></li>
             <li><a href="#">Zone d’intervention</a></li>
+            <li><a href="./devis.html">Devis en ligne</a></li>
           </ul>
         </div>
       </div>
@@ -188,8 +520,8 @@
             <i class="fas fa-map-marker-alt footer-column-i"></i>  1 place du Vexin
             78250 Meulan en Yvelines <br>
           </p>
-          <a href="tel:0130902784">
-            <i class="fas fa-phone-alt footer-column-i"></i>  01 30 90 27 84
+          <a href="tel:0161151915">
+            <i class="fas fa-phone-alt footer-column-i"></i>  01 61 15 19 15
           </p>
         </div>
       </div>
@@ -207,6 +539,14 @@
 <script src="./assets/js/formSubmit.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+
+  <div id="fixphone">
+    <a href="#" class="one phoneone" title="up">
+      <span class="text-white">
+        <i class="fas fa-chevron-up"></i>
+      </span></a>
+  </div>
+  
 </body>
 
 </html>
